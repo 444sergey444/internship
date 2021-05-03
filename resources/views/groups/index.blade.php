@@ -11,7 +11,7 @@
                     <th>Name group</th>
                     <th>
                         <a href="{{ route('group.create') }}">
-                            Добавить
+                            Add
                         </a>
                     </th>
                 </tr>
@@ -32,7 +32,7 @@
         </div>
         <div>
             <br/>
-            <div>
+            <div style="width: 30px;">
                 {{ $paginator->links() }}
             </div>
         </div>

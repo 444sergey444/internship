@@ -22,7 +22,7 @@ class GroupController extends Controller
 
     public function store(GroupStoreRequest $request)
     {
-        $group = new Group;
+        $group = new Group();
 
         $group->name = $request->name;
         $group->save();
@@ -61,15 +61,12 @@ class GroupController extends Controller
         }
 
         $data = ['name' => $request->name];
-        $result = $group
-            ->update($data);
+        $result = $group->update($data);
 
         if ($result) {
-            return redirect()
-                ->route('group.index');
+            return redirect()->route('group.index');
         } else {
-            return back()
-                ->withInput();
+            return back()->withInput();
         }
     }
 

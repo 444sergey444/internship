@@ -1,8 +1,8 @@
 <div>
-    <form method="POST" action="@if(isset($group)) {{ route($route, ['id' => $group->id]) }} @else {{ route($route) }} @endif">
+    <form method="POST" action="@if(!empty($group)) {{ route($route, ['id' => $group->id]) }} @else {{ route($route) }} @endif">
         @csrf
         @method($method)
-        Имя группы:<input type="text" name="name" value="{{ old('name', $group->name) ?? '' }}">
-        <button type="submit">Отправить</button>
+        Group name:<input type="text" name="name" value="{{ old('name', !empty($group) ? $group->name : null) }}">
+        <button type="submit">Submit</button>
     </form>
 </div>

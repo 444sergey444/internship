@@ -3,10 +3,10 @@
 @section('content')
     @include('includes.header')
     <div>
-        <h1>Страница группы</h1>
-        Имя группы:<input type="text" value="{{ $group->name }}" readonly>
+        <h1>Group page</h1>
+        Group name:<input type="text" value="{{ $group->name }}" readonly>
         <a href="{{ route('group.edit', ['id' => $group->id]) }}">
-            Редактировать
+            Edit
         </a>
         <form action="{{ route('group.delete', ['id' => $group->id]) }}" method="post">
             @csrf

@@ -16,9 +16,7 @@ class GroupsTableSeeder extends Seeder
         $groups = [];
 
         for ($i = 1; $i <= 10; $i++) {
-            $groups[] = [
-                'name' => 'qwerty'
-            ];
+            $groups[] = ['name' => 'group_' . $i];
         }
 
         \DB::table('groups')->insert($groups);

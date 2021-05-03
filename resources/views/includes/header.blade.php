@@ -1,4 +1,4 @@
 <div>
-    <div>
-        Header
-    </div>
+    Header
+    <a href="{{ route('home') }}">Home porn</a>
+</div>
